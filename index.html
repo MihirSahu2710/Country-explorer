@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🌍 Country Explorer</h1>
+
+  <input type="text" id="searchInput" placeholder="Search country...">
+
+  <select id="regionFilter">
+    <option value="all">All</option>
+    <option value="africa">Africa</option>
+    <option value="asia">Asia</option>
+    <option value="europe">Europe</option>
+    <option value="americas">Americas</option>
+    <option value="oceania">Oceania</option>
+  </select>
+
+  <select id="sortOption">
+    <option value="default">Sort</option>
+    <option value="name">Name</option>
+    <option value="population">Population</option>
+  </select>
+
+  <p id="status"></p>
+
+  <div id="countriesContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
