@@ -1,4 +1,4 @@
-console.log("JS loaded");
+const API_URL = "https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital";
 
 const container = document.getElementById("countriesContainer");
 const searchInput = document.getElementById("searchInput");
@@ -16,8 +16,7 @@ async function fetchCountries() {
   statusText.textContent = "Loading countries...";
 
   try {
-    const res = await fetch("https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital");
-
+    const res = await fetch(API_URL);
     if (!res.ok) {
       throw new Error("Failed to fetch data");
     }
@@ -29,8 +28,7 @@ async function fetchCountries() {
     statusText.textContent = "";
   } catch (error) {
     console.error(error);
-    statusText.textContent = "Error loading countries";
-  }
+statusText.textContent = "Unable to load countries. Please try again.";  }
 }
 
 function displayCountries(countries) {
